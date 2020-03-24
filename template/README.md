@@ -6,7 +6,7 @@ This is a [SemApps](https://semapps.org/)-based semantic application
 ## Quick start
 
 {{#localFuseki}}
-#### Launch your local Jena Fuseki instance
+### Launch your local Jena Fuseki instance
 
 Jena Fuseki is a semantic triple store. It is where your app's data will be stored.
 
@@ -17,9 +17,11 @@ $ docker-compose up
 ```
 
 Jena Fuseki is now available at the URL http://localhost:3030
+
+Please start by creating a `localData` dataset. This is where your triples will go.
 {{/localFuseki}}
 
-#### Run Moleculer in dev mode
+### Run Moleculer in dev mode
 
 ```bash
 $ npm run dev
@@ -58,10 +60,10 @@ You should get this result:
 ```json
 {
   "@context": {
+    "ldp": "http://www.w3.org/ns/ldp#",
     "as": "https://www.w3.org/ns/activitystreams#"
-    ...
   },
-  "@id": "http://localhost:3000/ldp/undefined",
+  "@id": "http://localhost:3000/ldp/as:Note",
   "@type": [
     "ldp:Container",
     "ldp:BasicContainer"
