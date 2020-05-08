@@ -23,6 +23,12 @@ module.exports = function(values) {
         when(answers) { return !answers.localFuseki; },
         default: 'localData'
       },
+      {
+        type: 'confirm',
+        name: 'sparqlEndpoint',
+        message: "Do you need a read-only SPARQL endpoint?",
+        default: true
+      },
     ],
 
     metalsmith: {
@@ -35,7 +41,8 @@ module.exports = function(values) {
       }
     },
     filters: {
-      "docker-compose.*": "localFuseki"
+      "docker-compose.*": "localFuseki",
+      "services/sparql-endpoint.service.js": "sparqlEndpoint"
     },
     completeMessage: `
 Your semantic application is ready!

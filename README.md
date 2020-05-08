@@ -4,6 +4,7 @@
 ## Features
 - Compatible with Moleculer v0.14.x
 - LDP and Triple Store services
+- Optional read-only SPARQL endpoint
 - ApiGateway with LDP routes
 - Docker file to run Jena Fuseki triple store locally (optional)
 
@@ -24,6 +25,7 @@ Template repo: assemblee-virtuelle/semapps-template-ldp
 ? Do you need a local instance of Jena Fuseki (with Docker)?
 ? What is the URL of your Jena Fuseki instance?
 ? What is the name of the dataset ?
+? Do you need a read-only SPARQL endpoint?
 
 Create 'my-project' folder...
 ? Would you like to run 'npm install'?
