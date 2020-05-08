@@ -14,7 +14,6 @@ services:
       - "3030"
     environment:
       ADMIN_PASSWORD: "admin"
-      FUSEKI_DATASET1: "{{dataSet}}"
 
 volumes:
   rdf_data:

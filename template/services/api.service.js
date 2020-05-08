@@ -1,5 +1,4 @@
 const ApiGatewayService = require('moleculer-web');
-const { Routes: LdpRoutes } = require('@semapps/ldp');
 
 module.exports = {
   mixins: [ApiGatewayService],
@@ -8,8 +7,12 @@ module.exports = {
     cors: {
       origin: '*',
       exposedHeaders: '*'
-    },
-    routes: [...LdpRoutes],
-    defaultLdpAccept: 'text/turtle'
+    }
+  },
+  dependencies: ['ldp'],
+  async started() {
+    [
+      ...(await this.broker.call('ldp.getApiRoutes')),
+    ].forEach(route => this.addRoute(route));
   }
 };
