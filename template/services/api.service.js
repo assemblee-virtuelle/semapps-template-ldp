@@ -7,18 +7,24 @@ module.exports = {
   mixins: [ApiGatewayService],
   settings: {
     server: true,
-{{#sparqlEndpoint}}
-    routes: [...SparqlEndpointRoutes],
-{{/sparqlEndpoint}}
+    routes: [],
     cors: {
       origin: '*',
       exposedHeaders: '*'
     }
   },
-  dependencies: ['ldp'],
+  dependencies: [
+    'ldp',
+{{#sparqlEndpoint}}
+    'sparqlEndpoint',
+{{/sparqlEndpoint}}
+  ],
   async started() {
     [
       ...(await this.broker.call('ldp.getApiRoutes')),
+{{#sparqlEndpoint}}
+      ...(await this.broker.call('sparqlEndpoint.getApiRoutes')),
+{{/sparqlEndpoint}}
     ].forEach(route => this.addRoute(route));
   }
 };

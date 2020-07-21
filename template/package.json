@@ -11,10 +11,10 @@
     "start": "moleculer-runner --env --instances=max services"
   },
   "dependencies": {
-    "@semapps/ldp": "0.1.4",
-    "@semapps/triplestore": "0.1.4",
+    "@semapps/ldp": "0.1.9",
+    "@semapps/triplestore": "0.1.9",
 {{#sparqlEndpoint}}
-    "@semapps/sparql-endpoint": "0.1.4",
+    "@semapps/sparql-endpoint": "0.1.9",
 {{/sparqlEndpoint}}
     "dotenv": "^8.2.0",
     "moleculer": "^0.14.4",
