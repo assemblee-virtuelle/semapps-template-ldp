@@ -6,7 +6,7 @@ module.exports = {
   settings: {
     baseUrl: process.env.SEMAPPS_HOME_URL,
     ontologies,
-    containers: ['/resources']
+    containers: [ '/persons', '/files'],
   },
   dependencies: ['fuseki-admin']
 };
