@@ -7,5 +7,6 @@ module.exports = {
     baseUrl: process.env.SEMAPPS_HOME_URL,
     ontologies,
     containers: ['/resources']
-  }
+  },
+  dependencies: ['fuseki-admin']
 };

@@ -7,5 +7,6 @@ module.exports = {
     mainDataset: process.env.SEMAPPS_MAIN_DATASET,
     jenaUser: process.env.SEMAPPS_JENA_USER,
     jenaPassword: process.env.SEMAPPS_JENA_PASSWORD
-  }
+  },
+  dependencies: ['fuseki-admin']
 };

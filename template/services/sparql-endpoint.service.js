@@ -6,5 +6,6 @@ module.exports = {
   mixins: [SparqlEndpointService],
   settings: {
     defaultAccept: 'application/ld+json'
-  }
+  },
+  dependencies: ['fuseki-admin']
 };
