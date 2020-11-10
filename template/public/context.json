@@ -2,7 +2,7 @@
   "@context": {
     "@vocab": "_:",
     "pair": "http://virtual-assembly.org/ontologies/pair#",
-    
+
     "as": "https://www.w3.org/ns/activitystreams#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
@@ -13,7 +13,7 @@
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "semapps": "http://semapps.org/ns/core#",
     "oasis": "http://cooperative-oasis.org/ns/core#",
-    
+
     "pair:affiliatedBy": {
       "@type": "@id"
     },
@@ -188,6 +188,10 @@
       "@type": "xsd:dateTime"
     },
     "pair:webPage": {
+      "@type": "@id"
+    },
+
+    "foaf:knows": {
       "@type": "@id"
     },
 
