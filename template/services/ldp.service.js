@@ -8,7 +8,9 @@ module.exports = {
     baseUrl: process.env.SEMAPPS_HOME_URL,
     ontologies,
     containers: [ '/persons', '/files'],
-    defaultJsonContext: urlJoin(process.env.SEMAPPS_HOME_URL, 'context.json')
+    defaultContainerOptions: {
+      jsonContext: urlJoin(process.env.SEMAPPS_HOME_URL, 'context.json')
+    }
   },
   dependencies: ['fuseki-admin']
 };
