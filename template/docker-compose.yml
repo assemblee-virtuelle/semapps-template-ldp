@@ -26,7 +26,7 @@ services:
     image: semapps/jena-fuseki-webacl
     container_name: fuseki_compact
     volumes:
-      - ./data/rdf_data:/fuseki
+      - rdf_data:/fuseki
 {{/webAcl}}
 
 
