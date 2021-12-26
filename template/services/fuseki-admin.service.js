@@ -9,7 +9,13 @@ module.exports = {
   },
   async started() {
     await this.actions.createDataset({
-      dataset: process.env.SEMAPPS_MAIN_DATASET
+      dataset: process.env.SEMAPPS_MAIN_DATASET,
+{{#webAcl}}
+      secure: true
+{{/webAcl}}
+{{^webAcl}}
+      secure: false
+{{/webAcl}}
     });
   }
 };

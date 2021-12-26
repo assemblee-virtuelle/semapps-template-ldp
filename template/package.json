@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@semapps/ldp": "0.4.0-alpha.5",
+    "@semapps/jsonld": "0.4.0-alpha.5",
     "@semapps/triplestore": "0.4.0-alpha.5",
     "@semapps/fuseki-admin": "0.4.0-alpha.5",
 {{#sparqlEndpoint}}
