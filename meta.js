@@ -50,7 +50,10 @@ module.exports = function(values) {
     filters: {
       "docker-compose.*": "localFuseki",
       "services/sparql-endpoint.service.js": "sparqlEndpoint",
-      "services/webacl.service.js": "webAcl"
+      "services/webacl.service.js": "webAcl",
+      "services/auth.service.js": "webAcl",
+      "services/webid.service.js": "webAcl",
+
     },
     completeMessage: `
 Your semantic application is ready!

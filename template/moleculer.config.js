@@ -20,8 +20,8 @@ module.exports = {
   // You can set all ServiceBroker configurations here
   // See https://moleculer.services/docs/0.14/configuration.html
   middlewares: [
-    // CacherMiddleware(cacherConfig), // Set the cacher before the WebAcl middleware
 {{#webAcl}}  
+  // CacherMiddleware(cacherConfig), // Set the cacher before the WebAcl middleware 	  
     WebAclMiddleware
 {{/webAcl}}
 

@@ -13,10 +13,14 @@ module.exports = {
   },
   methods: {
     authenticate(ctx, route, req, res) {
+{{#webAcl}}  
       return ctx.call('auth.authenticate', { route, req, res });
+{{/webAcl}}
     },
     authorize(ctx, route, req, res) {
+{{#webAcl}}
       return ctx.call('auth.authorize', { route, req, res });
+{{/webAcl}}
     }
   }
 };
