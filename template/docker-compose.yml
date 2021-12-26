@@ -2,12 +2,7 @@ version: '3.5'
 
 services:
   fuseki:
-{{#webAcl}}
     image: semapps/jena-fuseki-webacl
-{{/webAcl}}
-{{^webAcl}}
-    image: stain/jena-fuseki
-{{/webAcl}}
     container_name: fuseki
     restart: always
     volumes:
