@@ -26,6 +26,7 @@ Template repo: assemblee-virtuelle/semapps-template-ldp
 ? What is the URL of your Jena Fuseki instance?
 ? What is the name of the dataset ?
 ? Do you need a read-only SPARQL endpoint?
+? Do you need webACL (WAC) service and Fuseki support?
 
 Create 'my-project' folder...
 ? Would you like to run 'npm install'?
