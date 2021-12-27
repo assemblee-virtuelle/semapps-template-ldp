@@ -5,7 +5,7 @@ module.exports = [
 {{#webAcl}}  
   {
     path: '/users',
-    acceptedTypes: ['pair:Person', ACTOR_TYPES.PERSON],
+    acceptedTypes: ['pair:Person'],
     dereference: ['sec:publicKey', 'pair:hasLocation/pair:hasPostalAddress']
   },
 {{/webAcl}}
