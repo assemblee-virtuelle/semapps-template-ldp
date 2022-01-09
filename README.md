@@ -5,6 +5,7 @@
 - Compatible with Moleculer v0.14.x
 - LDP and Triple Store services
 - Optional read-only SPARQL endpoint
+- Optional webAcl secure service
 - ApiGateway with LDP routes
 - Docker file to run Jena Fuseki triple store locally (optional)
 
