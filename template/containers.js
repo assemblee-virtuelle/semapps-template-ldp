@@ -2,13 +2,11 @@ module.exports = [
   {
     path: '/'
   },
-{{#webAcl}}  
   {
     path: '/users',
     acceptedTypes: ['pair:Person'],
     dereference: ['sec:publicKey', 'pair:hasLocation/pair:hasPostalAddress']
   },
-{{/webAcl}}
   {
     path: '/files',
     // TODO load all images with tokens so files can be hidden by default
