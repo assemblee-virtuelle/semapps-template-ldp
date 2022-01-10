@@ -1,16 +1,17 @@
-const { LdpService } = require('@semapps/ldp');
-const ontologies = require('../ontologies');
+const { LdpService, DocumentTaggerMixin } = require('@semapps/ldp');
 const urlJoin = require('url-join');
+const ontologies = require('../ontologies');
+const CONFIG = require('../config');
+const containers = require('../containers');
 
 module.exports = {
-  mixins: [LdpService],
+  mixins: [LdpService, DocumentTaggerMixin],
   settings: {
-    baseUrl: process.env.SEMAPPS_HOME_URL,
+    baseUrl: CONFIG.HOME_URL,
     ontologies,
-    containers: [ '/persons', '/files'],
+    containers,
     defaultContainerOptions: {
-      jsonContext: urlJoin(process.env.SEMAPPS_HOME_URL, 'context.json')
+      jsonContext: urlJoin(CONFIG.HOME_URL, 'context.json')
     }
-  },
-  dependencies: ['fuseki-admin']
+  }
 };

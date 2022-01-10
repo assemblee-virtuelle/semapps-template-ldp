@@ -29,6 +29,13 @@ module.exports = function(values) {
         message: "Do you need a read-only SPARQL endpoint?",
         default: true
       },
+      {
+        type: 'confirm',
+        name: 'webAcl',
+        message: "Do you need webACL (WAC) service and Fuseki support?",
+        default: false
+      },
+
     ],
 
     metalsmith: {
@@ -42,7 +49,11 @@ module.exports = function(values) {
     },
     filters: {
       "docker-compose.*": "localFuseki",
-      "services/sparql-endpoint.service.js": "sparqlEndpoint"
+      "services/sparql-endpoint.service.js": "sparqlEndpoint",
+      "services/webacl.service.js": "webAcl",
+      "services/auth.service.js": "webAcl",
+      "services/webid.service.js": "webAcl",
+
     },
     completeMessage: `
 Your semantic application is ready!
