@@ -1,4 +1,4 @@
-const CONFIG = require('./config');
+const CONFIG = require('./config/config');
 {{#webAcl}}
 const { WebAclMiddleware, CacherMiddleware } = require('@semapps/webacl');
 
@@ -21,9 +21,8 @@ module.exports = {
   // See https://moleculer.services/docs/0.14/configuration.html
   middlewares: [
 {{#webAcl}}  
-  // CacherMiddleware(cacherConfig), // Set the cacher before the WebAcl middleware 	  
-    WebAclMiddleware
+    CacherMiddleware(cacherConfig), // Set the cacher before the WebAcl middleware
+    WebAclMiddleware({ baseUrl: CONFIG.HOME_URL})
 {{/webAcl}}
-
   ]
 };

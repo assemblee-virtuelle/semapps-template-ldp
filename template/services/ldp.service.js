@@ -1,8 +1,8 @@
 const { LdpService, DocumentTaggerMixin } = require('@semapps/ldp');
 const urlJoin = require('url-join');
-const ontologies = require('../ontologies');
-const CONFIG = require('../config');
-const containers = require('../containers');
+const ontologies = require('../config/ontologies.json');
+const CONFIG = require('../config/config');
+const containers = require('../config/containers');
 
 module.exports = {
   mixins: [LdpService, DocumentTaggerMixin],

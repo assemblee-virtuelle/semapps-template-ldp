@@ -1,7 +1,7 @@
 {
   "name": "{{projectName}}",
   "version": "1.0.0",
-  "description": "SemApps-based semantic application",
+  "description": "SemApps-based LDP server",
   "keywords": [
     "semapps",
     "semantic"
@@ -9,21 +9,20 @@
   "scripts": {
     "dev": "moleculer-runner --env --repl --hot services",
     "start": "moleculer-runner --env services",
-    "link-semapps-packages": "yarn link @semapps/activitypub @semapps/auth @semapps/backup @semapps/fuseki-admin @semapps/importer @semapps/inference @semapps/jsonld @semapps/ldp @semapps/middlewares @semapps/mime-types @semapps/pod @semapps/push @semapps/signature @semapps/sparql-endpoint @semapps/triplestore @semapps/webacl @semapps/webfinger @semapps/webhooks @semapps/webid",
-    "unlink-semapps-packages": "yarn unlink @semapps/activitypub @semapps/auth @semapps/backup @semapps/fuseki-admin @semapps/importer @semapps/inference @semapps/jsonld @semapps/ldp @semapps/middlewares @semapps/mime-types @semapps/pod @semapps/push @semapps/signature @semapps/sparql-endpoint @semapps/triplestore @semapps/webacl @semapps/webfinger @semapps/webhooks @semapps/webid"
+    "link-semapps-packages": "yarn link @semapps/activitypub @semapps/auth @semapps/backup @semapps/importer @semapps/inference @semapps/jsonld @semapps/ldp @semapps/middlewares @semapps/mime-types @semapps/pod @semapps/push @semapps/signature @semapps/sparql-endpoint @semapps/triplestore @semapps/webacl @semapps/webfinger @semapps/webhooks @semapps/webid",
+    "unlink-semapps-packages": "yarn unlink @semapps/activitypub @semapps/auth @semapps/backup @semapps/importer @semapps/inference @semapps/jsonld @semapps/ldp @semapps/middlewares @semapps/mime-types @semapps/pod @semapps/push @semapps/signature @semapps/sparql-endpoint @semapps/triplestore @semapps/webacl @semapps/webfinger @semapps/webhooks @semapps/webid"
   },
   "dependencies": {
-    "@semapps/ldp": "0.4.0-alpha.7",
-    "@semapps/jsonld": "0.4.0-alpha.7",
-    "@semapps/triplestore": "0.4.0-alpha.7",
-    "@semapps/fuseki-admin": "0.4.0-alpha.7",
+    "@semapps/ldp": "0.4.0-alpha.45",
+    "@semapps/jsonld": "0.4.0-alpha.45",
+    "@semapps/triplestore": "0.4.0-alpha.45",
 {{#sparqlEndpoint}}
-    "@semapps/sparql-endpoint": "0.4.0-alpha.7",
+    "@semapps/sparql-endpoint": "0.4.0-alpha.45",
 {{/sparqlEndpoint}}
 {{#webAcl}}
-    "@semapps/webacl": "0.4.0-alpha.7",
-    "@semapps/webid": "0.4.0-alpha.7",
-    "@semapps/auth": "0.4.0-alpha.7",
+    "@semapps/webacl": "0.4.0-alpha.45",
+    "@semapps/webid": "0.4.0-alpha.45",
+    "@semapps/auth": "0.4.0-alpha.45",
 {{/webAcl}}
     "url-join": "^4.0.1",
     "dotenv-flow": "^3.2.0",

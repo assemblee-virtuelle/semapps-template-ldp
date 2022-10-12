@@ -19,7 +19,7 @@ module.exports = function(values) {
       {
         type: 'confirm',
         name: 'dataSet',
-        message: "What is the name of the dataset ?",
+        message: "What is the name of the dataset?",
         when(answers) { return !answers.localFuseki; },
         default: 'localData'
       },
@@ -32,12 +32,11 @@ module.exports = function(values) {
       {
         type: 'confirm',
         name: 'webAcl',
-        message: "Do you need webACL (WAC) service and Fuseki support?",
+        message: "Do you need WebACL (WAC) authorizations?",
         default: false
       },
 
     ],
-
     metalsmith: {
       before(metalsmith) {
         const data = metalsmith.metadata();
@@ -53,7 +52,6 @@ module.exports = function(values) {
       "services/webacl.service.js": "webAcl",
       "services/auth.service.js": "webAcl",
       "services/webid.service.js": "webAcl",
-
     },
     completeMessage: `
 Your semantic application is ready!

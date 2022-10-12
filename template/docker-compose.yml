@@ -6,7 +6,7 @@ services:
     container_name: fuseki
     restart: always
     volumes:
-      - ./data/rdf_data:/fuseki
+      - ./data/fuseki:/fuseki
     ports:
       - "3030:3030"
     expose:
@@ -14,17 +14,3 @@ services:
     environment:
       ADMIN_PASSWORD: "admin"
       JAVA_MX_RAM: "4G"
-
-{{#webAcl}}
-  fuseki_compact:
-    entrypoint: /docker-compact-entrypoint.sh  
-    image: semapps/jena-fuseki-webacl
-    container_name: fuseki_compact
-    volumes:
-      - ./data/rdf_data:/fuseki
-{{/webAcl}}
-
-
-volumes:
-  rdf_data:
-
